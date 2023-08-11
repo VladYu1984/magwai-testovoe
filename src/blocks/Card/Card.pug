@@ -1,0 +1,11 @@
+mixin Card(img,title,subTitle,text,autor,date)
+  .Card&attributes(attributes)
+    .Card__picture
+      img(src=`img/Card/${img}.webp`, alt="post image").Card__image
+    .Card__content
+      .Card__info
+        h3.Card__title=title 
+        p.Card__subTitle=subTitle 
+        p.Card__text=text 
+        p.Card__descr Posted by #[b=autor], on #[span=date]
+      a(href="#" target="_blank").Card__button Continue reading 

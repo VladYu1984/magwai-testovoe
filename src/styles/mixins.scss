@@ -1,0 +1,52 @@
+@use "sass:math";
+/* Стандартный transition для hover-анимаций */
+
+@mixin transition {
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -ms-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Миксин замены цвета placeholder у input.
+Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
+@mixin placeholder($color, $opacity: 1) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+}
+
+//flex-миксин
+@mixin flex-dir($dir: column, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+//Перевод пикселей в емы
+@function px-to-em($px, $context: 16) {
+  @return math.div($px, $context) * 1em;
+}
+//Перевод пикслей в проценты для line-height
+@function px-to-per($lh, $fs) {
+  @return math.div($lh, $fs) * 100%;
+}
+//Анимация
+@keyframes fadeIn {
+	0% {
+		opacity: 0; }
+	100% {
+		opacity: 1; }
+}
+//animation: fadeIn linear 0.3s forwards;

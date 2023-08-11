@@ -1,0 +1,98 @@
+.CardsSection {
+  &__container{
+    padding-top: 92px;
+    padding-bottom: 256px;
+
+    @media (max-width: $tab) {
+			padding-top: 42px;
+			padding-bottom: 156px;
+      padding-left: 40px;
+		}
+
+		@media (max-width: $mob) {
+			padding-top: 48px;
+			padding-bottom: 43px;
+      padding-left: 16px;
+		}
+  }
+
+  &__title{
+    margin-bottom: 53px;
+
+    @media (max-width: $tab) {
+			margin-bottom: 40px;
+      font-size: px-to-em(42);
+      line-height: px-to-per(51,42);
+      padding-left: 10px;
+		}
+
+		@media (max-width: $mob) {
+			margin-bottom: 30px;
+      font-size: px-to-em(20);
+      line-height: px-to-per(24,20);
+      padding-left: 0;
+		}
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap: 63px;
+
+    @media (max-width: $mob) {
+      gap: 38px;
+    }
+  }
+
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: $tab) {
+      gap: 20px;
+    }
+
+    @media (max-width: $mob) {
+      flex-direction: column;
+    }
+  }
+
+  &__card{
+    flex: 0 0 320px;
+
+    @media (max-width: calc($desc - 1px) ) {
+      flex: 0 0 18.456%;
+    }
+
+    @media (max-width: $descSmall) {
+      flex: 0 0 23%;
+    }
+
+    @media (max-width: $tab) {
+      flex: 0 0 31.666%;
+    }
+
+    @media (max-width: 890px) {
+      flex: 0 0 48.444%;
+    }
+
+    @media (max-width: 770px) {
+      flex: 0 0 327.943px;
+    }
+
+    @media (max-width: $mob) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__button{
+    width: 293px;
+    height: 60px;
+    align-self: center;
+
+    .ClipButton__button{
+      clip-path: polygon(97.4% 0%, 91.5% 100%, 42.24% 100%, 0% 100%, 6.52% 0%);
+    }
+  }
+}

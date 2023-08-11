@@ -1,0 +1,36 @@
+{
+  "name": "magvai-test",
+  "version": "1.0.0",
+  "description": "lending test",
+  "main": "gulp.js",
+  "author": "VladYu1984",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-webp": "^4.0.1",
+    "jquery": "^3.3.1",
+    "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "pump": "^3.0.0"
+  }
+}

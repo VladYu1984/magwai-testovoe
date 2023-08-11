@@ -1,0 +1,19 @@
+mixin Header(modifier)
+  header.Header&attributes(attributes)
+    .Header__container.container
+      .Header__content
+        .Header__left
+          .Header__left-block
+            .Header__burger.jsBurger
+              span.jsBurgerItem
+            a(href="/").Header__logo
+                include img/logo.svg
+          .Header__menu
+            +Menu('УСЛУГИ','АБОНЕМЕНТЫ','ПОЧЕМУ МЫ','ОБОРУДОВАНИЕ','АКЦИИ','FAQ','КОНТАКТЫ')
+        .Header__right
+          a(href="tel:+70000000").Header__phone
+            picture 
+              source(media="(max-width: 767px)", srcset="img/svg/phoneMob.svg")
+              img(src="img/svg/phone.svg", alt="phone")
+          .Header__button.Popup__open 
+            +ClipButton('ОСТАВИТЬ ЗАЯВКУ')

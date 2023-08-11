@@ -1,0 +1,15 @@
+mixin Popup(modifier)
+  .Popup&attributes(attributes)
+    .Popup__bg 
+    .Popup__body 
+      span.Popup__close
+      h3.Popup__title Заказать звонок
+      form 
+        .Popup__form 
+          .Popup__block
+            span.Popup__field Ваше имя
+            input(type="text" name="name" placeholder="Иван Иванов").Popup__input
+          .Popup__block
+            span.Popup__field Ваш Телефон
+            input(type="text" name="phone").Popup__input.phone
+          button(type="submit").Popup__button Отправить

@@ -1,0 +1,157 @@
+.Header {
+	
+
+	&__container{
+		position: relative;
+		padding-top: 28px;
+		padding-bottom: 26px;
+
+		@media (max-width: $tab) {
+			padding-top: 30px;
+			padding-bottom: 28px;
+		}
+
+		@media (max-width: $mob) {
+			padding-top: 20px;
+			padding-bottom: 14px;
+		}
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__left{
+		display: flex;
+		align-items: center;
+		gap: 76px;
+
+		@media (max-width: $descSmall) {
+			gap: 38px;
+		}
+
+		@media (max-width: $mob) {
+			gap: 0;
+			width: 100%;
+		}
+	}
+
+	&__left-block{
+		display: flex;
+		align-items: center;
+		gap: 94px;
+
+		@media (max-width: $mob) {
+			gap: 0;
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+
+	&__burger{
+		display: none;
+
+		@media (max-width: $tab) {
+			display: block;
+		}
+	}
+
+	&__logo{
+		display: block;
+		text-decoration: none;
+
+		@media (max-width: $mob) {
+			svg{
+				max-width: 112.5px;
+				height: 38.413px;	
+			}
+		}
+	}
+
+	&__phone{
+		display: block;
+		text-decoration: none;
+
+		&:hover{
+			background-color: $clipButton-color;
+			clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+			transition: opacity 0.3s ease-in-out;
+		}
+	}
+
+	&__right{
+		display: flex;
+
+		@media (max-width:$mob) {
+			flex-direction: column;
+			align-items: center;
+			gap: 6px;
+		}
+	}
+
+	&__phone{
+		@media (max-width:$tab) {
+			transform: translateX(18px);
+		}
+		img{
+			width: 100%;
+		}
+	}
+
+	&__button{
+		width: 302px;
+		height: 60px;
+
+		@media (max-width:$tab) {
+			width: 220px;
+
+			&  .ClipButton__button{
+				clip-path: polygon(96.9% 0%, 88.5% 100%, 41.24% 100%, 3% 100%, 11.52% 0%);
+			}
+
+			&  .ClipButton__item{
+				transform: translateX(-11px) rotate(17deg);
+			}
+		}
+
+		@media (max-width:$mob) {
+			width: 100%;
+
+			&  .ClipButton__item{
+				display: none;
+			}
+		}
+	}
+
+	&__menu{
+		@media (max-width:$tab) {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background: $back-color;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 1s, z-index 0.3s, visibility 0s linear 1s;
+			z-index: 0;
+
+
+			&.active{
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 0s;
+				z-index: 1;
+			}
+		}
+
+		@media (max-width:$mob) {
+			display: flex;
+			flex-direction: column;
+			gap: 51px;
+		}
+	}
+
+}

@@ -1,0 +1,6 @@
+mixin Menu(...items)
+  .Menu&attributes(attributes)
+    ul.Menu__list 
+      each item in items
+        li.Menu__item   
+          a(href="#").Menu__link=item

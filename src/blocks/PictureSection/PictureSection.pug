@@ -1,0 +1,10 @@
+mixin PictureSection(modifier)
+  section.PictureSection&attributes(attributes)
+    img(src="img/PictureSection/01.webp", alt="background").PictureSection__background
+    .PictureSection__gradient
+      .PictureSection__container.container
+        .PictureSection__content 
+          h1.PictureSection__title.title Полет Илона Маска#[br]и DOGIE COIN
+          p.PictureSection__text В прошлый четверг все офигели от полета DOGIE COIN на марс.
+          .PictureSection__button.Popup__open   
+            +ClipButton('ОСТАВИТЬ ЗАЯВКУ')

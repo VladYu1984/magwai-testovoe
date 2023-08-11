@@ -1,0 +1,33 @@
+.ClipButton {
+  height: inherit;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  &__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(97.40% 0.00%,91.50% 100%,41.24% 100.00%,3.00% 100.00%,9.52% 0.00%);
+    width: 100%;
+    height: 100%;
+    background: $clipButton-color;
+    cursor: pointer;
+    border: none;
+    color: $white-color;
+    font-size: px-to-em(12);
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  &__item{
+    display: block;
+    background: $white-color;
+    width: 5px;
+    height: 100px;
+    transform:  translateX(-9px) rotate(17deg);
+  }
+  
+}
