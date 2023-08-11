@@ -7,7 +7,8 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gulp build && gh-pages -d build"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
@@ -16,6 +17,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
